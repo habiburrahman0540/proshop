@@ -4,13 +4,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import {Container} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeScreen from './screen/HomeScreen'
 const App=() =>{
   return (
     <>
       <Header/>
       <main>
         <Container>
-        <h1>This is content</h1>
+          <HomeScreen/>
         </Container>
         
       </main>
