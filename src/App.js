@@ -1,9 +1,20 @@
-
-
+import React from 'react';
+import './index.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import {Container} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 const App=() =>{
   return (
     <>
-      <h2>this is app</h2>
+      <Header/>
+      <main>
+        <Container>
+        <h1>This is content</h1>
+        </Container>
+        
+      </main>
+      <Footer/>
     </>
   );
 }
