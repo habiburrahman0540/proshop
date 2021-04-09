@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen"
 import CartScreen from "./screens/CartScreen"
-import {BrowserRouter as Router,Route} from "react-router-dom"
+import {HashRouter as Router,Route} from "react-router-dom"
 import Login from './screens/Login'
 import Register from './screens/Register'
 import ProfileScreen from './screens/ProfileScreen'
@@ -24,8 +24,6 @@ function App() {
   <Route path='/shipping' component={ShippingScreen} />
 </Container>
       </main>
-     
-    
      <Footer/>
     </Router>
   );
