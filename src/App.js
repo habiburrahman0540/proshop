@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Container} from "react-bootstrap";
+import Header from "./components/Header";
+import Footer from "./components/Footer"
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen"
+import CartScreen from "./screens/CartScreen"
+import {BrowserRouter as Router,Route} from "react-router-dom"
+import Login from './screens/Login'
+import Register from './screens/Register'
+import ProfileScreen from './screens/ProfileScreen'
+import ShippingScreen from './screens/ShippingScreen'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header/>
+      <main>
+<Container>
+<Route path="/" component={HomeScreen} exact/>
+  <Route path="/product/:id" component={ProductScreen}/>
+  <Route path="/card/:id?" component={CartScreen}/>
+  <Route path="/login" component={Login}/>
+  <Route path='/register' component={Register} />
+  <Route path='/profile' component={ProfileScreen}/>
+  <Route path='/shipping' component={ShippingScreen} />
+</Container>
+      </main>
+     
+    
+     <Footer/>
+    </Router>
   );
 }
 
