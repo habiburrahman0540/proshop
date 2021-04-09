@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import Rating from "./Rating";
-const Product = ({ product }) => {
+const Product = ({ product}) => {
+
   return (
     <Card className="my-2 p-2 rounded">
       <Link to={`/product/${product._id}`}>
@@ -25,7 +26,10 @@ const Product = ({ product }) => {
           </div>
         </Card.Text>
         <Card.Title as="h3">${product.price}</Card.Title>
-        <Button variant="success">ADD TO CART</Button>
+          <Link to={`/product/${product._id}`}>
+            {product.countInStock === 0 ?(<Button variant="danger" disabled type="button">Out of Stock</Button>):(<Button variant="success" type="button">Details</Button>) }
+        
+          </Link>
       </Card.Body>
     </Card>
   );
