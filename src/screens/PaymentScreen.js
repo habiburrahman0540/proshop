@@ -24,14 +24,15 @@ const PaymentScreen = ({history}) => {
                     <Col>
                     <Form.Check 
                     type="radio"
-                    label="PayPal or Credit Card"
+                    label="PayPal "
                     id="PayPal"
                     name="paymentMethod"
                     value={paymentMethod}
                     onChange={(e)=>setPaymentMethod(e.target.value)}
                     checked
-                    >
+                    >                       
                     </Form.Check>
+                    <i class="fab fa-cc-paypal fa-3x"></i>
                     </Col>
                 </Form.Group>
                 <Button type="submit" variant="primary">Continue</Button>
